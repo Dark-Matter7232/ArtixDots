@@ -1,0 +1,19 @@
+#!/bin/sh
+
+PROG=$@
+
+get_mem() {
+	echo "process rss memory_size"
+	for cmd in $PROG; do
+		#RSS=$(pidof $cmd | xargs -I{} ps --no-headers -p {} -o rss | numfmt --to=iec-i)
+		#MEM=$(pidof $cmd | xargs -I{} ps --no-headers -p {} -o size | sed 's/$/Ki/' | numfmt --from=iec-i --to=iec-i)
+		#echo "$cmd $RSS $MEM"
+		for pid in $(pidof $cmd); do
+			RSS=$(ps --no-headers -p $pid -o rss | numfmt --to=iec-i)
+			MEM=$(ps --no-headers -p $pid -o size | sed 's/$/Ki/' | numfmt --from=iec-i --to=iec-i)
+			echo "$cmd $RSS $MEM"
+		done
+	done
+}
+
+get_mem | column -t

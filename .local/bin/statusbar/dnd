@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Prints the DND status.
+
+case $BLOCK_BUTTON in
+	1) dunstctl set-paused true ;;
+	3) dunstctl set-paused false ;;
+esac
+
+status="$(dunstctl is-paused)"
+
+if [ "$status" = "false" ]; then
+	icon="󰚘"
+else
+	icon="󰚙"
+fi
+
+echo "$icon"

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Set as a cron job to check for new RSS entries for newsboat.
+# If newsboat is open, sends it an "R" key to refresh.
+
+ping -q -c 1 example.org > /dev/null || exit
+
+/usr/bin/notify-send "📰 Updating Mails..."
+mw -Y
+pkill -RTMIN+6 "${STATUSBAR:-dwmblocks}"
+/usr/bin/notify-send "📰 RSS feed update complete."
