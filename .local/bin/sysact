@@ -9,6 +9,7 @@ esac
 
 cmds="\
 🔒 lock		    dilock
+🚪 re-login	kill -TERM $(pgrep -u $USER "\bdwm$")
 ♻ renew dwm	   kill -HUP $(pidof -s dwm)
 🔃 reboot	    sudo -A openrc-shutdown -r now
 🖥 shutdown	    sudo -A openrc-shutdown -p now"
