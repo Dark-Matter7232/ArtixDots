@@ -24,3 +24,5 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'miyakogi/conoline.vim'
+Plug 'kyoz/purify', { 'rtp': 'vim' }
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}

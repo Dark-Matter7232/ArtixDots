@@ -57,7 +57,7 @@ function! OpenTerminal()
   split term://zsh
   resize 10
 endfunction
-nnoremap <c-n> :call OpenTerminal()<CR>
+nnoremap <A-n> :call OpenTerminal()<CR>
 let g:mkdp_auto_start = 1
 autocmd FileType markdown setlocal spell
 autocmd FileType gitcommit setlocal spell
@@ -72,9 +72,17 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
+" Unmap <ESC> binding for fzf buffer if binding exists or suppress unmap error
+au FileType fzf silent! tunmap <Esc>
 " open new split panes to right and below
 set splitright
 set splitbelow
 let g:conoline_auto_enable = 1
 let g:conoline_use_colorscheme_default_normal=1
+let g:conoline_use_colorscheme_default_insert=1
+
+syntax on " This is required
+colorscheme purify
+let g:airline_theme='purify'
+
 set autochdir
