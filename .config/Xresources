@@ -1,5 +1,5 @@
 !! Transparency (0-1):
-*.alpha: 0.8
+*.alpha: 0.95
 
 !! Set a default font and font size as below:
 *.font: monospace:size=10
@@ -61,27 +61,58 @@ rofi.font:                           Source Code Pro Medium 10
 /* *.foreground: #282828 */
 /* st.alpha: 0.9 */
 
-! Dracula Xresources palette
- *.foreground:  #d6dbe5
- *.background:  #222222
- *.color0:      #5e3059
- *.color8:      #d6dbe5
- *.color1:      #f81118
- *.color9:      #de352e
- *.color2:      #2dc55e
- *.color10:     #1dd361
- *.color3:      #ecba0f
- *.color11:     #f3bd09
- *.color4:      #ffffff
- *.color12:     #1081d6
- *.color5:      #4e5ab7
- *.color13:     #5350b9
- *.color6:      #d65cad
- *.color14:     #d65cad
- *.color7:      #d6dbe5
- *.color15:     #ffffff
- *.colorBD:     #d6dbe5
+/*! Mine palette          */
+/* *.foreground:  #d6dbe5 */
+/* *.background:  #222222 */
+/* *.color0:      #5e3059 */
+/* *.color8:      #d6dbe5 */
+/* *.color1:      #f81118 */
+/* *.color9:      #de352e */
+/* *.color2:      #2dc55e */
+/* *.color10:     #1dd361 */
+/* *.color3:      #ecba0f */
+/* *.color11:     #f3bd09 */
+/* *.color4:      #ffffff */
+/* *.color12:     #1081d6 */
+/* *.color5:      #4e5ab7 */
+/* *.color13:     #5350b9 */
+/* *.color6:      #d65cad */
+/* *.color14:     #d65cad */
+/* *.color7:      #d6dbe5 */
+/* *.color15:     #ffffff */
+/* *.colorBD:     #d6dbe5 */
 
+! Custom
+! Original theme https://github.com/nathanbuchar/atom-one-dark-terminal
+*.foreground:    #ABB2BF
+*.background:    #1E2127
+*.cursorColor:   #5C6370
+*.highlightColor:#3A3F4B
+
+! Negro y gris
+*.color0:        #1E2127
+*.color8:        #5C6370
+! Rojos
+*.color1:        #E06C75
+*.color9:        #E06C75
+! Verde
+*.color2:        #98C379
+*.color10:       #98C379
+! Amarillo
+*.color3:        #D19A66
+*.color11:       #D19A66
+! Azul
+*.color4:        #61AFEF
+*.color12:       #61AFEF
+! Magenta
+*.color5:        #C678DD
+*.color13:       #C678DD
+! Cyan
+*.color6:        #56B6C2
+*.color14:       #56B6C2
+! Blanco
+*.color7:        #ABB2BF
+*.color15:       #FFFFFF
 
 /* ! base16 */
 /* *.color0:       #181818 */

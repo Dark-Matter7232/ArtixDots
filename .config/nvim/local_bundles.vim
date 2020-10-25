@@ -26,3 +26,5 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'miyakogi/conoline.vim'
 Plug 'kyoz/purify', { 'rtp': 'vim' }
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'mhinz/vim-startify'

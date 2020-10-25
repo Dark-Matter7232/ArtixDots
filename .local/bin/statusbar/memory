@@ -9,6 +9,4 @@ case $BLOCK_BUTTON in
 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
-free -h --si | awk 'FNR==2{ print $0 }' | awk '{ printf $7 }'
-
-
+free -h --si | awk 'FNR==2{ print $0 }' | awk '{ printf ("󰍛 ")$7 }'
