@@ -17,11 +17,13 @@
 
 # Comment/uncomment these lines depending on what wm you want to use. Also
 # check the i3blocks line above.
-ssh-agent
+#ssh-agent
 dbus-launch dwm
+#exec bspwm
 #export MOZ_X11_EGL=1
+#exec bspwm
 #eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
-export SSH_AUTH_SOCK
+#export SSH_AUTH_SOCK
 export STATUSBAR="dwmblocks"
 # launches a session dbus instance
 

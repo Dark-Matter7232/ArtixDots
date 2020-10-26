@@ -58,5 +58,6 @@
       "window.menuBarVisibility": "toggle",
       "diffEditor.ignoreTrimWhitespace": false,
     "editor.minimap.enabled": false,
-    "C_Cpp.updateChannel": "Insiders"
+    "C_Cpp.updateChannel": "Insiders",
+    "editor.tabSize": 8
 }
