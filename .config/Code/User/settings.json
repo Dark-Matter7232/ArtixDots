@@ -59,5 +59,21 @@
       "diffEditor.ignoreTrimWhitespace": false,
     "editor.minimap.enabled": false,
     "C_Cpp.updateChannel": "Insiders",
-    "editor.tabSize": 8
+    "editor.tabSize": 8,
+    "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+    "vscode-neovim.mouseSelectionStartVisualMode": true,
+    "vscode-neovim.neovimInitVimPaths.linux": "~/.config/ccd/init.vim",
+    "[dart]": {
+      "editor.formatOnSave": true,
+      "editor.formatOnType": true,
+      "editor.rulers": [
+        80
+      ],
+      "editor.selectionHighlight": false,
+      "editor.suggest.snippetsPreventQuickSuggestions": false,
+      "editor.suggestSelection": "first",
+      "editor.tabCompletion": "onlySnippets",
+      "editor.wordBasedSuggestions": false
+    },
+    "dart.openDevTools": "flutter"
 }
