@@ -8,11 +8,11 @@ case "$(readlink -f /sbin/init)" in
 esac
 
 cmds="\
-🔒 lock		    dilock
-🚪 re-login	kill -TERM $(pgrep -u $USER "\bdwm$")
-♻ renew dwm	   kill -HUP $(pidof -s dwm)
-🔃 reboot	    sudo -A openrc-shutdown -r now
-🖥 shutdown	    sudo -A openrc-shutdown -p now"
+ lock		    dilock
+ re-login	kill -TERM $(pgrep -u $USER "\bdwm$")
+ renew dwm	   kill -HUP $(pidof -s dwm)
+ reboot	    sudo -A openrc-shutdown -r now
+ shutdown	    sudo -A openrc-shutdown -p now"
 
 choice="$(echo "$cmds" | cut -d'	' -f 1 | dmenu)" || exit 1
 

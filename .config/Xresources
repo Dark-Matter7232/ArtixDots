@@ -1,8 +1,8 @@
 !! Transparency (0-1):
-*.alpha: 0.95
+*.alpha: 0.80
 
 !! Set a default font and font size as below:
-*.font: monospace:size=10
+*.font: JetBrainsMono NF:size=10
 Xft.antialias:  1
 Xft.autohint:   0
 Xft.hinting:    1

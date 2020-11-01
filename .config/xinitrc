@@ -19,6 +19,7 @@
 # check the i3blocks line above.
 #ssh-agent
 dbus-launch dwm
+#dbus-launch awesome
 #exec bspwm
 #export MOZ_X11_EGL=1
 #exec bspwm

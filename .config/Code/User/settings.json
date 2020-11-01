@@ -1,7 +1,7 @@
 {
     "workbench.colorTheme": "One Monokai",
     "editor.fontFamily": "'Firicico' , Consolas, 'Courier New', monospace",
-    "terminal.integrated.fontFamily": "Cascadia Mono PL",
+    "terminal.integrated.fontFamily": "Cascadia Mono PL, JetBrainsMono NF",
     "workbench.iconTheme": "Monokai Pro (Filter Ristretto) Icons",
     "editor.fontLigatures": true,
     "workbench.preferredDarkColorTheme": "Dracula Refined",
@@ -75,5 +75,8 @@
       "editor.tabCompletion": "onlySnippets",
       "editor.wordBasedSuggestions": false
     },
-    "dart.openDevTools": "flutter"
+    "dart.openDevTools": "flutter",
+    "[shellscript]": {
+      "editor.defaultFormatter": "shakram02.bash-beautify"
+    }
 }

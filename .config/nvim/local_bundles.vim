@@ -29,3 +29,6 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'mhinz/vim-startify'
 Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': ':UpdateRemotePlugins'}
+" Add flutter packages
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'thosakwe/vim-flutter'
