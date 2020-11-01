@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/dash
 
 icon=" 󰓇"
 
@@ -6,7 +6,7 @@ icon=" 󰓇"
 status=$(playerctl metadata --format '{{artist}} - {{title}}' | cut -c 1-50)
 runstate=$(playerctl status)
 
-if [[ $runstate == "Playing" ]]; then
+if [ "$runstate" = "Playing" ]; then
     echo "$icon $status"
 else
     echo "[◼]"

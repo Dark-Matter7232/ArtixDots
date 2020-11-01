@@ -13,7 +13,7 @@ ps=$(echo $pass | base64 -d)
 count=$(curl -u $username@gmail.com:$ps --silent 'https://mail.google.com/mail/feed/atom' | sed -n 's:.*<fullcount>\(.*\)</fullcount>.*:\1:p')
 
 if [ "$count" = "0"  ]; then
-    echo "$iconno $count"
+    echo "$iconno 0"
 else
     echo "$icon $count"
 fi
