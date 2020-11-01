@@ -1,17 +1,18 @@
-#! /bin/sh
+#! /bin/dash
+# use dash shell for best performance
 case $BLOCK_BUTTON in
     1) xdg-open https://mail.google.com ;;
 esac
 iconno="󰇮"
 icon="󰛏"
 #  Source base64 encoded username and pass from text file
-source ${HOME}/.local/share/password-store/pass.txt
-# Decode base64 encoded pass, username and store them as vairables 
+. ${HOME}/.local/share/password-store/pass.txt
+# Decode base64 encoded pass, username and store them as vairables
 username=$(echo $user  | base64 -d)
 ps=$(echo $pass | base64 -d)
 count=$(curl -u $username@gmail.com:$ps --silent 'https://mail.google.com/mail/feed/atom' | sed -n 's:.*<fullcount>\(.*\)</fullcount>.*:\1:p')
 
-if [[ $count == "0"  ]]; then
+if [ "$count" = "0"  ]; then
     echo "$iconno $count"
 else
     echo "$icon $count"
