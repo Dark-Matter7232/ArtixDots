@@ -3,7 +3,8 @@
 # Prints the DND status.
 
 case $BLOCK_BUTTON in
-	1) notify-send "Playing now $title" ;;
+	1) dunstctl set-paused true ;;
+	3) dunstctl set-paused false ;;
 esac
 
 status="$(dunstctl is-paused)"
