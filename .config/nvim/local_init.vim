@@ -71,6 +71,8 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
+nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 " Unmap <ESC> binding for fzf buffer if binding exists or suppress unmap error
 au FileType fzf silent! tunmap <Esc>
 " open new split panes to right and below
@@ -88,4 +90,4 @@ colorscheme purify
 let g:airline_theme='purify'
 
 set autochdir
-nnoremap <leader>3 <cmd>CHADopen<cr>
+set mouse=a

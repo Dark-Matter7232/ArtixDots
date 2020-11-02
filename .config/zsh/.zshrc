@@ -76,7 +76,7 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
 ZSH_THEME="pi"
-plugins=(git zsh-completions zsh-autosuggestions zsh-syntax-highlighting git)
+plugins=(git zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
 autoload -U compinit && compinit
 source ~/.oh-my-zsh/oh-my-zsh.sh
 ZSH_THEME="pi"
@@ -265,7 +265,16 @@ fi
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ecba0f,bold,underline"
 ZSH_AUTOSUGGEST_USE_ASYNC=true
 colorscript -r
-
+# kill all tmux sessions with no terminal emulator attached
+tmkill() {
+    LIST="$(tmux ls)"
+    TSESSIONS=""
+    while read -r line; do
+        if ! echo "$line" | grep 'attached'; then
+            tmux kill-session -t "$(echo $line | grep -oP '^\d\d?')"
+        fi
+    done <<<"$LIST"
+}
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 ZSH_THEME="pi"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
